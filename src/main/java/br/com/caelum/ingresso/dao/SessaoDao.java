@@ -14,6 +14,10 @@ import br.com.caelum.ingresso.model.Sessao;
 @Repository
 public class SessaoDao {
 	
+	public Sessao fingOne(Integer id) {
+		return manager.find(Sessao.class, id);
+	}
+	
 	@PersistenceContext
 	private EntityManager manager;
 	
