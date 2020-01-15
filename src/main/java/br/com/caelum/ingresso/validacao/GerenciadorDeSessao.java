@@ -44,7 +44,8 @@ public class GerenciadorDeSessao {
 		boolean sessaoNovaComecaDepoisDaExistente = terminoSessaoExistente.isBefore(inicioSessaoNova);
 
 		if (sessaoNovaTerminaAntesDaExistente || sessaoNovaComecaDepoisDaExistente) {
-
+			
+			return false;
 		}
 		return true;
 
@@ -56,9 +57,12 @@ public class GerenciadorDeSessao {
 		return sessao.getHorario().atDate(hoje);
 
 	}
+
 	private LocalDateTime getTerminoSessaoComDiaDeHoje(Sessao sessao) {
 		LocalDateTime inicioSessaoNova = getInicioSessaoComDiaDeHoje(sessao);
-		
+
 		return inicioSessaoNova.plus(sessao.getFilme().getDuracao());
 	}
-}
+
+	}
+
