@@ -7,8 +7,6 @@ import java.time.LocalTime;
 import org.junit.Assert;
 import org.junit.Test;
 
-import br.com.caelum.ingresso.model.desconto.SemDesconto;
-
 public class DescontoTest {
 
 	@Test
